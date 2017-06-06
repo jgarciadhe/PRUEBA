@@ -1,0 +1,866 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canal DHE</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery-1.11.1.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
+<script src="js/slider.js"></script>
+</head>
+
+<body>
+<!--HOME-->
+<div data-role="page" id="home" style="background-image: url('img/tenemos-que-hablar-de-kevin.jpg'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;"
+    data-theme="a">
+  <div data-role="header" data-position="fixed" class="center-button">
+    <img src="img/logo-dhe.png" class="ui-li-icon">
+  </div>
+  <div data-role="content">
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="peliculas.php" data-transition="flip"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social" data-transition="flip"><div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    
+    </div>
+  </div>
+</div>
+<!--PELICULAS-->
+<div data-role="page" id="peliculas" style="background-image: url('img/fondo.png'); background-attachment: fixed; background-repeat: repeat;" data-theme="a">
+  <div data-role="header" data-position="fixed">
+   <a href="#genero" data-role="button" data-transition="flip">Género</a>
+    <h1>Trailers</h1>
+    <a href="#buscar" data-role="button" data-icon="search" data-iconpos="notext" data-transition="flip">Button</a>
+  </div>
+  <div data-role="content">
+  	
+  	<div class="ui-grid-b">
+	<div class="ui-block-a">
+	<div><img src="img/poster/7.jpg" class="ui-li-icon"></div>
+	<p class="centerl"><a href="#pelicula1">Todo para un bebé</a></p></div>
+	<div class="ui-block-b">
+	<div><img src="img/poster/1.jpg" class="ui-li-icon"></div>
+	<p class="centerl">La venganza del jinete</p></div>
+	<div class="ui-block-c">
+	<div><img src="img/poster/2.jpg" class="ui-li-icon"></div>
+	<p class="centerl">Suegra al ataque</p></div>
+</div><!-- /grid-b -->
+ 	
+ 	<div class="ui-grid-b">
+	<div class="ui-block-a">
+	<div><img src="img/poster/8.jpg" class="ui-li-icon"></div>
+	
+	<p class="centerl">Del crepúsculo al amanecer - ep 4</p></div>
+	<div class="ui-block-b">
+	<div><img src="img/poster/3.jpg" class="ui-li-icon"></div>
+	<p class="centerl">Tenemos que hablar de kevin</p></div>
+	<div class="ui-block-c">
+	<div><img src="img/poster/4.jpg" class="ui-li-icon"></div>
+	<p class="centerl">Los hombres del soul</p></div>
+</div><!-- /grid-b -->
+ 	
+ 	<div class="ui-grid-b">
+	<div class="ui-block-a">
+	<div><img src="img/poster/5.jpg" class="ui-li-icon"></div>
+	<p class="centerl">Réplicas</p></div>
+	<div class="ui-block-b">
+	<div><img src="img/poster/6.jpg" class="ui-li-icon"></div>
+	<p class="centerl">Samuri x: el fin de la leyenda</p>
+
+</div>
+	<div class="ui-block-c"></div>
+</div><!-- /grid-b -->
+ 	
+  	
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#peliculas" data-transition="flip" data-theme="a"  class="ui-btn-active ui-state-persist"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social" data-transition="flip"><div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--BUSCADOR-->
+<div data-role="page" id="buscar" style="background-image: url('img/fondo.png'); background-attachment: fixed; background-repeat: repeat;" data-theme="a">
+  <div data-role="header" data-position="fixed">
+   <a data-direction="reverse" href="#peliculas" data-role="button" data-icon="back" data-iconpos="notext" data-transition="flip">Button</a>
+    <h1>Buscar</h1>
+    <a data-direction="reverse" href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-transition="flip">Button</a>
+  </div>
+  <div data-role="content">
+  	<ul data-role="listview" data-filter="true" class="ui-listview">
+  	  <li><a href="#pelicula1">Todo para un bebé</a></li>
+	  <li><a href="#">La venganza del jinete</a></li>
+      <li><a href="#">Suegra al ataque</a></li>
+      <li><a href="#">Del crepúsculo al amanecer - ep 4</a></li>
+      <li><a href="#">Tenemos que hablar de kevin</a></li>
+      <li><a href="#">Los hombres del soul</a></li>
+      <li><a href="#">Samuri x: el fin de la leyenda</a></li>
+			</ul>
+  	
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#peliculas" data-transition="flip"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social" data-transition="flip"><div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    
+    </div>
+  </div>
+</div>
+
+<!--Género-->
+<div data-role="page" id="genero" style="background-image: url('img/fondo.png'); background-attachment: fixed; background-repeat: repeat;" data-theme="b">
+  <div data-role="header" data-position="fixed">
+   <a data-direction="reverse" data-role="button" href="#peliculas" data-icon="back" data-iconpos="notext" data-transition="flip">Button</a>
+    <h1>Buscar</h1>
+     <a data-direction="reverse" href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-transition="flip">Button</a>
+  </div>
+  <div data-role="content">
+  	<ul data-role="listview" class="ui-listview">
+      <li><a href="#">Acción</a></li>
+      <li><a href="#">Drama</a></li>
+      <li><a href="#">Familiar</a></li>
+	  <li><a href="#">Suspenso</a></li>
+      <li><a href="#">Terror</a></li>
+			</ul>
+  	
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#peliculas" data-transition="flip"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social" data-transition="flip"><div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    
+    </div>
+  </div>
+</div>
+
+
+<!--PELICULA 1-->
+<div data-role="page" id="pelicula1" style="background-image: url('img/fondo.png'); background-attachment: fixed; background-repeat: repeat;"
+    data-theme="a">
+  <div data-role="header" data-position="fixed">
+   <a data-direction="reverse" href="#peliculas" data-role="button" data-icon="back" data-iconpos="notext" data-transition="flip">Button</a>
+   <a data-direction="reverse" href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-transition="flip">Button</a>
+    <h1>Todo para un bebé</h1>
+  </div>
+  <div data-role="content"  style="padding: 0;margin: 0;">
+	<img src="img/todo-para-un-bebe.jpg" class="cimagen">
+   <div data-role="controlgroup" data-type="horizontal" class="center">
+<a href="#pelicula1" data-role="button">Detalles</a>
+<a href="#" data-role="button">Compartir</a>
+</div>
+</div>
+<div class="contenido">
+    <h3>Todo para un bebé</h3>
+    <p class="parrafo">Tras varios intentos fallidos para dejar embarazada a su mujer, un hombre pide a sus amigos que roben el depósito de esperma que años dejó en un banco de donaciones de esperma.</p>
+    <h3>Trailer</h3>
+    
+    <a href="#popupVideo" data-rel="popup" data-position-to="window" data-role="button" data-theme="b" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" aria-haspopup="true" aria-owns="#popupVideo" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-up-a"><span class="ui-btn-inner ui-btn-corner-all nada"><span class="ui-btn-text"><img src="img/todo-para-un-bebe-play.jpg" class="ui-li-icon"></span></span></a>
+    <div data-role="popup" id="popupVideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
+
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/AHa-uDZUKLQ" frameborder="0" allowfullscreen></iframe>
+	 
+</div>
+    
+ </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="peliculas.php" data-transition="flip"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social" data-transition="flip"><div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div data-role="page" id="calendario" style="background-image: url('img/fondo.png'); background-attachment: fixed; background-repeat: repeat;"
+    data-theme="a">
+  <div data-role="header" data-position="fixed">
+   <a data-direction="reverse" href="peliculas.php" data-role="button" data-icon="back" data-iconpos="notext" data-transition="flip">Button</a>
+    <h1>Calendario</h1>
+     <a data-direction="reverse" href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-transition="flip">Button</a>
+  </div>
+  <div data-role="content">
+  	<!--LUNES-->
+  	<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="b" class="ui-collapsible  ui-collapsible-inset ui-corner-all ui-collapsible-themed-content">
+  		<h1>Lunes</h1>
+  		<ul data-role="listview" class="ui-listview">
+  	  <li><a href="#">
+  	  <img src="img/mini/camino-sangriento.jpg">
+        <h2>CAMINO SANGRIENTO</h2>
+        <p>Amber, una joven que sueña con escapar de su pequeño pueblo natal, convence a sus amigos</p>
+  	  </a></li>
+	  <li><a href="#">
+	    <img src="img/mini/del-crepusculo-al-amanecer-4.jpg">
+        <h2>DEL CREPÚSCULO AL AMANECER - EP 4</h2>
+        <p>Los hermanos Gecko intentan salir del hotel y tomar como rehenes a la familia Fuller, pero Freddie llega y complica la situación.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/congelados.jpg">
+        <h2>CONGELADOS</h2>
+        <p>Unos fanáticos del snowboard, que van en la telesilla de una estación de esquí ambicionando</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>	  	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>	 	  
+     </a></li>
+      <li><a href="#">
+      	<img src="img/mini/un-monstruo-en-paris.jpg">
+        <h2>UN MONSTRUO EN PARIS</h2>
+        <p>Hacia 1910, en París, una extraña criatura tiene aterrorizada a la población.</p>
+      </a></li>
+      <li><a href="#">
+	<img src="img/mini/smitty.jpg">
+        <h2>SMITTY</h2>
+        <p>El joven Ben Barret ha sido arrestado una vez más y su madre ya está más que harta de sus gamberradas.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-x.jpg">
+        <h2>SAMURAI X</h2>
+        <p>Adaptación del manga de Nobuhiro Watsuki. Kenshin Himura es un famoso </p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-2.jpg">
+        <h2>SAMURAI X: EL INFIERNO DE KIOTO</h2>
+        <p>Kenshin Himura vive retirado, fiel a su juramento de no volver a empuñar la espada</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-3.jpg">
+        <h2>SAMURAI X: EL FIN DE LA LEYENDA</h2>
+        <p>El duelo entre Kenshin Himura y el maligno Shishio Makoto sigue sin resolverse.</p>		  
+     </a></li>
+      <li><a href="#">
+		  <img src="img/mini/metallica.jpg">
+        <h2>METALLICA THROUGH THE NEVER</h2>
+        <p>Trip, un joven fan de Metallica es enviado en una misión urgente durante la presentación de la banda.</p>	
+		  </a></li>
+			</ul>
+  	</div>
+  	<!--MARTES-->
+  	<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="b" class="ui-collapsible  ui-collapsible-inset ui-corner-all ui-collapsible-themed-content">
+  		<h1>Martes</h1>
+  		<ul data-role="listview" class="ui-listview">
+  	  <li><a href="#">
+  	  <img src="img/mini/camino-sangriento.jpg">
+        <h2>CAMINO SANGRIENTO</h2>
+        <p>Amber, una joven que sueña con escapar de su pequeño pueblo natal, convence a sus amigos</p>
+  	  </a></li>
+	  <li><a href="#">
+	    <img src="img/mini/del-crepusculo-al-amanecer-4.jpg">
+        <h2>DEL CREPÚSCULO AL AMANECER - EP 4</h2>
+        <p>Los hermanos Gecko intentan salir del hotel y tomar como rehenes a la familia Fuller, pero Freddie llega y complica la situación.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/congelados.jpg">
+        <h2>CONGELADOS</h2>
+        <p>Unos fanáticos del snowboard, que van en la telesilla de una estación de esquí ambicionando</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>	  	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>	 	  
+     </a></li>
+      <li><a href="#">
+      	<img src="img/mini/un-monstruo-en-paris.jpg">
+        <h2>UN MONSTRUO EN PARIS</h2>
+        <p>Hacia 1910, en París, una extraña criatura tiene aterrorizada a la población.</p>
+      </a></li>
+      <li><a href="#">
+	<img src="img/mini/smitty.jpg">
+        <h2>SMITTY</h2>
+        <p>El joven Ben Barret ha sido arrestado una vez más y su madre ya está más que harta de sus gamberradas.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-x.jpg">
+        <h2>SAMURAI X</h2>
+        <p>Adaptación del manga de Nobuhiro Watsuki. Kenshin Himura es un famoso </p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-2.jpg">
+        <h2>SAMURAI X: EL INFIERNO DE KIOTO</h2>
+        <p>Kenshin Himura vive retirado, fiel a su juramento de no volver a empuñar la espada</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-3.jpg">
+        <h2>SAMURAI X: EL FIN DE LA LEYENDA</h2>
+        <p>El duelo entre Kenshin Himura y el maligno Shishio Makoto sigue sin resolverse.</p>		  
+     </a></li>
+      <li><a href="#">
+		  <img src="img/mini/metallica.jpg">
+        <h2>METALLICA THROUGH THE NEVER</h2>
+        <p>Trip, un joven fan de Metallica es enviado en una misión urgente durante la presentación de la banda.</p>	
+		  </a></li>
+			</ul>
+  	</div>
+  	<!--MIÉRCOLES-->
+  	<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="b" class="ui-collapsible  ui-collapsible-inset ui-corner-all ui-collapsible-themed-content">
+  		<h1>Miércoles</h1>
+  		<ul data-role="listview" class="ui-listview">
+  	  <li><a href="#">
+  	  <img src="img/mini/camino-sangriento.jpg">
+        <h2>CAMINO SANGRIENTO</h2>
+        <p>Amber, una joven que sueña con escapar de su pequeño pueblo natal, convence a sus amigos</p>
+  	  </a></li>
+	  <li><a href="#">
+	    <img src="img/mini/del-crepusculo-al-amanecer-4.jpg">
+        <h2>DEL CREPÚSCULO AL AMANECER - EP 4</h2>
+        <p>Los hermanos Gecko intentan salir del hotel y tomar como rehenes a la familia Fuller, pero Freddie llega y complica la situación.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/congelados.jpg">
+        <h2>CONGELADOS</h2>
+        <p>Unos fanáticos del snowboard, que van en la telesilla de una estación de esquí ambicionando</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>	  	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>	 	  
+     </a></li>
+      <li><a href="#">
+      	<img src="img/mini/un-monstruo-en-paris.jpg">
+        <h2>UN MONSTRUO EN PARIS</h2>
+        <p>Hacia 1910, en París, una extraña criatura tiene aterrorizada a la población.</p>
+      </a></li>
+      <li><a href="#">
+	<img src="img/mini/smitty.jpg">
+        <h2>SMITTY</h2>
+        <p>El joven Ben Barret ha sido arrestado una vez más y su madre ya está más que harta de sus gamberradas.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-x.jpg">
+        <h2>SAMURAI X</h2>
+        <p>Adaptación del manga de Nobuhiro Watsuki. Kenshin Himura es un famoso </p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-2.jpg">
+        <h2>SAMURAI X: EL INFIERNO DE KIOTO</h2>
+        <p>Kenshin Himura vive retirado, fiel a su juramento de no volver a empuñar la espada</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-3.jpg">
+        <h2>SAMURAI X: EL FIN DE LA LEYENDA</h2>
+        <p>El duelo entre Kenshin Himura y el maligno Shishio Makoto sigue sin resolverse.</p>		  
+     </a></li>
+      <li><a href="#">
+		  <img src="img/mini/metallica.jpg">
+        <h2>METALLICA THROUGH THE NEVER</h2>
+        <p>Trip, un joven fan de Metallica es enviado en una misión urgente durante la presentación de la banda.</p>	
+		  </a></li>
+			</ul>
+  	</div>
+  	<!--JUEVES-->
+  	<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="b" class="ui-collapsible  ui-collapsible-inset ui-corner-all ui-collapsible-themed-content">
+  		<h1>Jueves</h1>
+  		<ul data-role="listview" class="ui-listview">
+  	  <li><a href="#">
+  	  <img src="img/mini/camino-sangriento.jpg">
+        <h2>CAMINO SANGRIENTO</h2>
+        <p>Amber, una joven que sueña con escapar de su pequeño pueblo natal, convence a sus amigos</p>
+  	  </a></li>
+	  <li><a href="#">
+	    <img src="img/mini/del-crepusculo-al-amanecer-4.jpg">
+        <h2>DEL CREPÚSCULO AL AMANECER - EP 4</h2>
+        <p>Los hermanos Gecko intentan salir del hotel y tomar como rehenes a la familia Fuller, pero Freddie llega y complica la situación.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/congelados.jpg">
+        <h2>CONGELADOS</h2>
+        <p>Unos fanáticos del snowboard, que van en la telesilla de una estación de esquí ambicionando</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>	  	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>	 	  
+     </a></li>
+      <li><a href="#">
+      	<img src="img/mini/un-monstruo-en-paris.jpg">
+        <h2>UN MONSTRUO EN PARIS</h2>
+        <p>Hacia 1910, en París, una extraña criatura tiene aterrorizada a la población.</p>
+      </a></li>
+      <li><a href="#">
+	<img src="img/mini/smitty.jpg">
+        <h2>SMITTY</h2>
+        <p>El joven Ben Barret ha sido arrestado una vez más y su madre ya está más que harta de sus gamberradas.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-x.jpg">
+        <h2>SAMURAI X</h2>
+        <p>Adaptación del manga de Nobuhiro Watsuki. Kenshin Himura es un famoso </p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-2.jpg">
+        <h2>SAMURAI X: EL INFIERNO DE KIOTO</h2>
+        <p>Kenshin Himura vive retirado, fiel a su juramento de no volver a empuñar la espada</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-3.jpg">
+        <h2>SAMURAI X: EL FIN DE LA LEYENDA</h2>
+        <p>El duelo entre Kenshin Himura y el maligno Shishio Makoto sigue sin resolverse.</p>		  
+     </a></li>
+      <li><a href="#">
+		  <img src="img/mini/metallica.jpg">
+        <h2>METALLICA THROUGH THE NEVER</h2>
+        <p>Trip, un joven fan de Metallica es enviado en una misión urgente durante la presentación de la banda.</p>	
+		  </a></li>
+			</ul>
+  	</div>
+  	<!--VIERNES-->
+  	<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="b" class="ui-collapsible  ui-collapsible-inset ui-corner-all ui-collapsible-themed-content">
+  		<h1>Viernes</h1>
+  		<ul data-role="listview" class="ui-listview">
+  	  <li><a href="#">
+  	  <img src="img/mini/camino-sangriento.jpg">
+        <h2>CAMINO SANGRIENTO</h2>
+        <p>Amber, una joven que sueña con escapar de su pequeño pueblo natal, convence a sus amigos</p>
+  	  </a></li>
+	  <li><a href="#">
+	    <img src="img/mini/del-crepusculo-al-amanecer-4.jpg">
+        <h2>DEL CREPÚSCULO AL AMANECER - EP 4</h2>
+        <p>Los hermanos Gecko intentan salir del hotel y tomar como rehenes a la familia Fuller, pero Freddie llega y complica la situación.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/congelados.jpg">
+        <h2>CONGELADOS</h2>
+        <p>Unos fanáticos del snowboard, que van en la telesilla de una estación de esquí ambicionando</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>	  	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>	 	  
+     </a></li>
+      <li><a href="#">
+      	<img src="img/mini/un-monstruo-en-paris.jpg">
+        <h2>UN MONSTRUO EN PARIS</h2>
+        <p>Hacia 1910, en París, una extraña criatura tiene aterrorizada a la población.</p>
+      </a></li>
+      <li><a href="#">
+	<img src="img/mini/smitty.jpg">
+        <h2>SMITTY</h2>
+        <p>El joven Ben Barret ha sido arrestado una vez más y su madre ya está más que harta de sus gamberradas.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-x.jpg">
+        <h2>SAMURAI X</h2>
+        <p>Adaptación del manga de Nobuhiro Watsuki. Kenshin Himura es un famoso </p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-2.jpg">
+        <h2>SAMURAI X: EL INFIERNO DE KIOTO</h2>
+        <p>Kenshin Himura vive retirado, fiel a su juramento de no volver a empuñar la espada</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-3.jpg">
+        <h2>SAMURAI X: EL FIN DE LA LEYENDA</h2>
+        <p>El duelo entre Kenshin Himura y el maligno Shishio Makoto sigue sin resolverse.</p>		  
+     </a></li>
+      <li><a href="#">
+		  <img src="img/mini/metallica.jpg">
+        <h2>METALLICA THROUGH THE NEVER</h2>
+        <p>Trip, un joven fan de Metallica es enviado en una misión urgente durante la presentación de la banda.</p>	
+		  </a></li>
+			</ul>
+  	</div>
+  	<!--SÁBADO-->
+  	<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="b" class="ui-collapsible  ui-collapsible-inset ui-corner-all ui-collapsible-themed-content">
+  		<h1>Sábado</h1>
+  		<ul data-role="listview" class="ui-listview">
+  	  <li><a href="#">
+  	  <img src="img/mini/camino-sangriento.jpg">
+        <h2>CAMINO SANGRIENTO</h2>
+        <p>Amber, una joven que sueña con escapar de su pequeño pueblo natal, convence a sus amigos</p>
+  	  </a></li>
+	  <li><a href="#">
+	    <img src="img/mini/del-crepusculo-al-amanecer-4.jpg">
+        <h2>DEL CREPÚSCULO AL AMANECER - EP 4</h2>
+        <p>Los hermanos Gecko intentan salir del hotel y tomar como rehenes a la familia Fuller, pero Freddie llega y complica la situación.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/congelados.jpg">
+        <h2>CONGELADOS</h2>
+        <p>Unos fanáticos del snowboard, que van en la telesilla de una estación de esquí ambicionando</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>	  	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>	 	  
+     </a></li>
+      <li><a href="#">
+      	<img src="img/mini/un-monstruo-en-paris.jpg">
+        <h2>UN MONSTRUO EN PARIS</h2>
+        <p>Hacia 1910, en París, una extraña criatura tiene aterrorizada a la población.</p>
+      </a></li>
+      <li><a href="#">
+	<img src="img/mini/smitty.jpg">
+        <h2>SMITTY</h2>
+        <p>El joven Ben Barret ha sido arrestado una vez más y su madre ya está más que harta de sus gamberradas.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-x.jpg">
+        <h2>SAMURAI X</h2>
+        <p>Adaptación del manga de Nobuhiro Watsuki. Kenshin Himura es un famoso </p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-2.jpg">
+        <h2>SAMURAI X: EL INFIERNO DE KIOTO</h2>
+        <p>Kenshin Himura vive retirado, fiel a su juramento de no volver a empuñar la espada</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-3.jpg">
+        <h2>SAMURAI X: EL FIN DE LA LEYENDA</h2>
+        <p>El duelo entre Kenshin Himura y el maligno Shishio Makoto sigue sin resolverse.</p>		  
+     </a></li>
+      <li><a href="#">
+		  <img src="img/mini/metallica.jpg">
+        <h2>METALLICA THROUGH THE NEVER</h2>
+        <p>Trip, un joven fan de Metallica es enviado en una misión urgente durante la presentación de la banda.</p>	
+		  </a></li>
+			</ul>
+  	</div>
+  	<!--domingo-->
+  	<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="b" class="ui-collapsible  ui-collapsible-inset ui-corner-all ui-collapsible-themed-content">
+  		<h1>Domingo</h1>
+  		<ul data-role="listview" class="ui-listview">
+  	  <li><a href="#">
+  	  <img src="img/mini/camino-sangriento.jpg">
+        <h2>CAMINO SANGRIENTO</h2>
+        <p>Amber, una joven que sueña con escapar de su pequeño pueblo natal, convence a sus amigos</p>
+  	  </a></li>
+	  <li><a href="#">
+	    <img src="img/mini/del-crepusculo-al-amanecer-4.jpg">
+        <h2>DEL CREPÚSCULO AL AMANECER - EP 4</h2>
+        <p>Los hermanos Gecko intentan salir del hotel y tomar como rehenes a la familia Fuller, pero Freddie llega y complica la situación.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/congelados.jpg">
+        <h2>CONGELADOS</h2>
+        <p>Unos fanáticos del snowboard, que van en la telesilla de una estación de esquí ambicionando</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>	  	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>	 	  
+     </a></li>
+      <li><a href="#">
+      	<img src="img/mini/un-monstruo-en-paris.jpg">
+        <h2>UN MONSTRUO EN PARIS</h2>
+        <p>Hacia 1910, en París, una extraña criatura tiene aterrorizada a la población.</p>
+      </a></li>
+      <li><a href="#">
+	<img src="img/mini/smitty.jpg">
+        <h2>SMITTY</h2>
+        <p>El joven Ben Barret ha sido arrestado una vez más y su madre ya está más que harta de sus gamberradas.</p>	  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/las-tortugas-nija.jpg">
+        <h2>LAS TORTUGAS NINJA</h2>
+        <p>Adaptación de los famosos cómics de Las Tortugas Ninja, que relata cómo cuatro tortugas</p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/stormbreaker.jpg">
+        <h2>STORMBREAKER</h2>
+        <p>Alex Rider es un adolescente normal y corriente que vive con su tío Ian.</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-x.jpg">
+        <h2>SAMURAI X</h2>
+        <p>Adaptación del manga de Nobuhiro Watsuki. Kenshin Himura es un famoso </p>			  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-2.jpg">
+        <h2>SAMURAI X: EL INFIERNO DE KIOTO</h2>
+        <p>Kenshin Himura vive retirado, fiel a su juramento de no volver a empuñar la espada</p>		  
+     </a></li>
+      <li><a href="#">
+	<img src="img/mini/samurai-3.jpg">
+        <h2>SAMURAI X: EL FIN DE LA LEYENDA</h2>
+        <p>El duelo entre Kenshin Himura y el maligno Shishio Makoto sigue sin resolverse.</p>		  
+     </a></li>
+      <li><a href="#">
+		  <img src="img/mini/metallica.jpg">
+        <h2>METALLICA THROUGH THE NEVER</h2>
+        <p>Trip, un joven fan de Metallica es enviado en una misión urgente durante la presentación de la banda.</p>	
+		  </a></li>
+			</ul>
+  	</div>
+  	
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#peliculas" data-transition="flip"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"  class="ui-btn-active ui-state-persist"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social" data-transition="flip"><div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    
+    </div>
+  </div>
+</div>
+<!--TOP-->
+<div data-role="page" id="top" style="background-image: url('img/fondo.png'); background-attachment: fixed; background-repeat: repeat;" data-theme="a">
+  <div data-role="header" data-position="fixed">
+   <a href="#calendario" data-direction="reverse" data-role="button" data-icon="back" data-iconpos="notext" data-transition="flip">Button</a>
+    <h1>Top 8</h1>
+    <a href="#home" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="notext" data-transition="flip">Button</a>
+  </div>
+  <div data-role="content" style="padding: 0;margin: 0;">
+  <div class="banner-top">1. Tenemos que hablar de Kevin</div>
+  <div class="naranja">2. Todo para un bebé</div>
+  <div class="amarillo">3. Del crepúsculo al amanecer</div>
+  <div class="naranja">4. Los hombres del soul</div>
+  <div class="amarillo">5. Samurai x</div>
+  <div class="naranja">6. La venganza del jinete</div>
+  <div class="amarillo">7. Suegra al ataque</div>
+  <div class="naranja">8. Repiclas</div>
+	</div>
+	
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#peliculas" data-transition="flip"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip" class="ui-btn-active ui-state-persist"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social" data-transition="flip"><div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    
+    </div>
+  </div>
+</div>
+<div data-role="page" id="noticias" style="background-image: url('img/fondo.png'); background-attachment: fixed; background-repeat: repeat;" data-theme="a">
+  <div data-role="header" data-position="fixed">
+   <a href="#top" data-direction="reverse" data-role="button" data-icon="back" data-iconpos="notext" data-transition="flip">Button</a>
+    <h1>Noticias</h1>
+     <a href="#home" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="notext" data-transition="flip">Button</a>
+  </div>
+  <div data-role="content">
+  	
+  	<ul data-role="listview" data-icon="false" class="foto" data-theme="b">
+  	<br/>
+    <li><a href="#">
+    <img src="img/new/n-star.jpg">
+    <span>Películas</span>
+    <h2>10 FRASES DE PELÍCULAS QUE PROBABLEMENTE HAS ESTADO DICIENDO MAL</h2>
+    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+        <p class="ui-li-aside"><img src="img/compartir.png" class="pimg"></p>
+    </a></li>
+    <br/>
+    <li><a href="#">
+    <img src="img/new/n-piratas.jpg">
+    <span>Películas</span>
+    <h2>10 COSAS INCREÍBLES DE PIRATAS DEL CARIBE 5</h2>
+    <p><strong>Durante el rodaje de “Piratas del caribe: la venganza de salazar”, pasaron</strong></p>
+        <p class="ui-li-aside"><img src="img/compartir.png" class="pimg"></p>
+    </a></li>
+    <br/>
+    <li><a href="#">
+    <img src="img/new/n-bond.jpg">
+    <span>Actores</span>
+    <h2>LOS DESTACADOS JAMES BOND DE LA HISTORIA DAN SU ADIÓS A ROGER MOORE</h2>
+    <p><strong>El actor Roger Moore falleció este marte 23 de Mayo a causa de un </strong></p>
+        <p class="ui-li-aside"><img src="img/compartir.png" class="pimg"></p>
+    </a></li>
+    <br/>
+     <li><a href="#">
+     <img src="img/new/n-tilda.jpg">
+     <span>Actores</span>
+    <h2>TILDA SWINTON EN FESTIVAL DE CANNES 2017</h2>
+    <p><strong>“Hay sitio para todos”, le responde Tilda Swinton a Pedro Almodóvar en</strong></p>
+        <p class="ui-li-aside"><img src="img/compartir.png" class="pimg"></p>
+    </a></li>
+    <br/>
+     <li><a href="#">
+     <img src="img/new/n-piratas-del-caribe.jpg">
+     <span>Películas</span>
+    <h2>DISNEY DENUNCIA EL ROBO DE “PIRATAS DEL CARIBE 5” POR PARTE DE UN GRUPO DE “HACKERS”</h2>
+    <p><strong>El consejero delegado de Disney, Bob Iger, ha reconocido</strong></p>
+        <p class="ui-li-aside"><img src="img/compartir.png" class="pimg"></p>
+    </a></li>
+    <br/>
+     <li><a href="#">
+     <img src="img/new/n-ezra.jpg">
+     <span>Actores</span>
+    <h2>10 COSAS QUE DEBES SABER DE EZRA MILLER</h2>
+    <p><strong>Ezra Miller es nuestro actor esta semana en la película: “tenemos</strong></p>
+        <p class="ui-li-aside">
+     <img src="img/compartir.png" class="pimg"></p>
+    </a></li>
+</ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#peliculas" data-transition="flip"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"  class="ui-btn-active ui-state-persist"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social" data-transition="flip"><div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    
+    </div>
+  </div>
+</div>
+<div data-role="page" id="social" style="background-image: url('img/fondo.png'); background-attachment: fixed; background-repeat: repeat;" data-theme="a">
+  <div data-role="header" data-position="fixed">
+   <a href="#noticias" data-direction="reverse" data-role="button" data-icon="back" data-iconpos="notext" data-transition="flip">Button</a>
+    <h1>Redes sociales</h1>
+    <a href="#home" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="notext" data-transition="flip">Button</a>
+  </div>
+  <div data-role="content">
+	<h1 class="center">Mantente conectado hoy y siempre</h1>
+	<ul data-role="listview" data-inset="true">
+  <li data-theme="e"><a href="https://www.facebook.com/canaldhe/">Facebook</a></li>
+</ul>
+	<ul data-role="listview" data-inset="true">
+  <li data-theme="d"><a href="https://twitter.com/Canal_DHE">Twitter</a></li>
+</ul>
+<ul data-role="listview" data-inset="true">
+  <li  data-theme="c"><a href="https://www.instagram.com/canaldhe/">Instagram</a></li>
+</ul>
+	</div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#peliculas" data-transition="flip"><div><img src="img/movie.png" class="ui-li-icon"></div>Trailers</a></li>
+        <li><a href="#calendario" data-transition="flip"><div><img src="img/calendario.png" class="ui-li-icon"></div>Calendario</a></li>
+        <li><a href="#top" data-transition="flip"><div><img src="img/estrella.png" class="ui-li-icon"></div>Top 8</a></li>
+        <li><a href="#noticias" data-transition="flip"><div><img src="img/new.png" class="ui-li-icon"></div>Noticias</a></li>
+        <li><a href="#social"  class="ui-btn-active ui-state-persist" data-transition="flip">
+        <div><img src="img/social.png" class="ui-li-icon"></div>Social</a></li>
+      </ul>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

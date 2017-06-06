@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+.center-button{
+margin:0 auto;
+margin-left:auto;
+margin-right:auto;
+align:center;
+text-align:center;
+}
+img {
+    display: block;
+    margin: auto;
+}
+.centerl{
+  text-align: center;
+	font-size: 12px; 
+		
+}
+.cimagen{
+	width: 100%;
+	height: auto;
+	border-bottom: solid 1px #c6c6c6;
+}
+.center{
+	text-align: center;
+	margin: 0 auto;
+}
+.contenido{
+	padding: 3px 15px;
+	background: rgba(67,76,90,1);
+    background: -moz-linear-gradient(left,rgba(67,76,90,1) 0%,rgba(37,46,54,1) 100%);
+    background: -webkit-gradient(left top,right top,color-stop(0%,rgba(67,76,90,1)),color-stop(100%,rgba(37,46,54,1)));
+    background: -webkit-linear-gradient(left,rgba(67,76,90,1) 0%,rgba(37,46,54,1) 100%);
+    background: -o-linear-gradient(left,rgba(67,76,90,1) 0%,rgba(37,46,54,1) 100%);
+    background: -ms-linear-gradient(left,rgba(67,76,90,1) 0%,rgba(37,46,54,1) 100%);
+    background: linear-gradient(to right,rgba(67,76,90,1) 0%,rgba(37,46,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b6593d',endColorstr='#761a13',GradientType=1);
+}
+.parrafo{
+	font-size: 14px;
+	border-bottom: solid 1px #fff;
+	padding-bottom: 10px;
+	text-align: justify;
+}
+.nada{
+	padding: 0!important;
+}
+.banner-top{
+	background-image: url(../img/top-ganador.jpg);
+	background-repeat: no-repeat;
+	color: #fff;
+	padding-top: 250px;
+	/*padding-bottom: 30px;*/
+	padding-left: 15px;
+	font-size: 22px;
+	vertical-align: text-bottom;
+}
+
+.conp{
+	padding: 15px;
+	overflow: hidden;
+}
+.amarillo{
+	background: rgba(237,208,23,1);
+    background: -moz-linear-gradient(left,rgba(237,208,23,1) 0%,rgba(233,139,22,1) 100%);
+    background: -webkit-gradient(left top,right top,color-stop(0%,rgba(237,208,23,1)),color-stop(100%,rgba(233,139,22,1)));
+    background: -webkit-linear-gradient(left,rgba(237,208,23,1) 0%,rgba(233,139,22,1) 100%);
+    background: -o-linear-gradient(left,rgba(237,208,23,1) 0%,rgba(233,139,22,1) 100%);
+    background: -ms-linear-gradient(left,rgba(237,208,23,1) 0%,rgba(233,139,22,1) 100%);
+    background: linear-gradient(to right,rgba(237,208,23,1) 0%,rgba(233,139,22,1) 100%);
+	padding: 15px 20px;
+	color: #fff;
+}
+.naranja{
+	background: rgba(233,139,22,1);
+    background: -moz-linear-gradient(left,rgba(233,139,22,1) 0%,rgba(237,208,23,1) 100%);
+    background: -webkit-gradient(left top,right top,color-stop(0%,rgba(233,139,22,1)),color-stop(100%,rgba(237,208,23,1)));
+    background: -webkit-linear-gradient(left,rgba(233,139,22,1) 0%,rgba(237,208,23,1) 100%);
+    background: -o-linear-gradient(left,rgba(233,139,22,1) 0%,rgba(237,208,23,1) 100%);
+    background: -ms-linear-gradient(left,rgba(233,139,22,1) 0%,rgba(237,208,23,1) 100%);
+    background: linear-gradient(to right,rgba(233,139,22,1) 0%,rgba(237,208,23,1) 100%);
+	padding: 15px 20px;
+	color: #fff;
+}
+
+.foto span{
+	background: rgba(182,89,61,1);
+    background: -moz-linear-gradient(left,rgba(182,89,61,1) 0%,rgba(118,26,19,1) 100%);
+    background: -webkit-gradient(left top,right top,color-stop(0%,rgba(182,89,61,1)),color-stop(100%,rgba(118,26,19,1)));
+    background: -webkit-linear-gradient(left,rgba(182,89,61,1) 0%,rgba(118,26,19,1) 100%);
+    background: -o-linear-gradient(left,rgba(182,89,61,1) 0%,rgba(118,26,19,1) 100%);
+    background: -ms-linear-gradient(left,rgba(182,89,61,1) 0%,rgba(118,26,19,1) 100%);
+    background: linear-gradient(to right,rgba(182,89,61,1) 0%,rgba(118,26,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b6593d',endColorstr='#761a13',GradientType=1);
+}
+.foto img{
+	max-width: 100px!important;
+	max-height: 100px!important;
+}
+.pimg{
+	max-height: 16px!important;
+	max-width: 16px!important;
+	margin-right: 10px;
+}
+.center{
+	text-align: center;
+	padding: 80px 20px 30px 20px;
+}
